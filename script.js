@@ -33,9 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let sliderImages = [];
   let currentImageIndex = 0;
 
-  // trap 감지 변수
-  let trapClicked = false;
-
   // 초기 데이터 로드 및 슬라이더 설정
   loadInitialData();
 
@@ -332,22 +329,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // trap-button 클릭 시 봇으로 판단
-  const trapButton = document.getElementById("trap-button");
-  if (trapButton) {
-    trapButton.addEventListener("click", () => {
-      trapClicked = true;
-    });
-  }
-
   submitButton.addEventListener("click", () => {
     sessionStorage.removeItem("analysisCompleted"); // 초기화
-    if (trapClicked) {
-      alert("자동화된 접근이 감지되었습니다. 이용이 차단됩니다.");
-      // 분석 차단 및 이동 또는 종료
-      window.location.href = "https://google.com"; // 또는 다른 페이지
-      return;
-    }
+
+    // 이후 기존 startAnalysis 호출
     startAnalysis();
   });
 
