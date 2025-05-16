@@ -129,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
       .then((res) => res.json())
       .then((data) => {
         loadingModal.style.display = "none";
-        console.log("얼굴 검증 결과:", data.result);
         // API가 이제 true 또는 false 값을 반환
         if (data.result === true) {
           uploadedPhoto = file;
@@ -206,7 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log("얼굴 분석 결과:", data);
           // API가 인덱스를 반환
           if (
             typeof data.result === "number" &&
@@ -214,11 +212,9 @@ document.addEventListener("DOMContentLoaded", () => {
             data.result < 15
           ) {
             recommendationIndex = data.result;
-            console.log("추천 인덱스:", recommendationIndex);
           } else {
             // 인덱스가 유효하지 않은 경우 기본값으로 설정
             recommendationIndex = Math.floor(Math.random() * 15);
-            console.log("기본 추천 인덱스 사용:", recommendationIndex);
           }
 
           // fetch가 완료된 후 두번째 텍스트로 변경
@@ -258,7 +254,6 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("얼굴 분석 오류:", error);
           // 오류 발생 시 기본값으로 설정
           recommendationIndex = Math.floor(Math.random() * 15);
-          console.log("오류 발생으로 기본 인덱스 사용:", recommendationIndex);
 
           // 오류 발생시에도 다음 단계로 진행
           analysisText1.style.animation = "fadeOutDown 0.3s forwards";
