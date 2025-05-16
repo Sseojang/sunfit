@@ -1,4 +1,37 @@
-# 선글라스 AI 추천 서비스
+# Sunglasses AI Recommendation Service
+The Sunglasses AI Recommendation Service is a prototype application that recommends sunglasses tailored to individuals based on their facial photos, gender, and age.
+
+# Features
+The service allows users to select their gender and enter their age, then upload a photo of their face with support for drag-and-drop functionality. Once the image is uploaded, an AI analysis simulation is performed to determine the best sunglasses fit for the user. The recommended sunglasses results are then displayed, and users can easily share these results using the native sharing feature of their device.
+
+# Technology Stack
+The application is built using modern web technologies, including HTML5 for markup, CSS3 for styling, and JavaScript (ES6+) for interactive features. It also leverages the Web Share API to enable seamless sharing capabilities across different platforms.
+
+# Project Structure
+
+```
+sunglasses-recommendation/
+├── index.html     # Main HTML file
+├── styles.css     # Stylesheet
+├── script.js      # JavaScript functionality
+└── data.json      # Sunglasses product data
+```
+
+# Installation and Execution
+To run the project, first clone the repository to your local machine. Then, simply open the index.html file in your web browser to launch the application.
+
+# Deployment
+The application can be easily deployed using static hosting services such as GitHub Pages, Netlify, or Vercel.
+
+# Deployment via GitHub Pages
+To deploy using GitHub Pages, create a new GitHub repository and push your project files to it. Then, enable GitHub Pages in the repository settings to publish your site.
+
+# Notes
+This project utilizes the DeepFace AI open-source library to perform facial analysis. The user interface and experience are optimized for mobile environments to ensure accessibility and ease of use.
+
+---------------------------------------------------------------------------------------------------------------
+
+# 선글라스 AI 추천 서비스 (KO)
 
 선글라스 AI 추천 서비스는 사용자의 얼굴 사진, 성별, 나이를 기반으로 개인에게 어울리는 선글라스를 추천해주는 프로토타입 애플리케이션입니다.
 
