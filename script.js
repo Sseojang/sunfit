@@ -28,9 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let uploadedPhoto = null;
   let recommendationIndex = null;
 
-  // trap 감지 변수
-  let trapClicked = false;
-
   // 슬라이더 이미지 요소와 데이터
   const sliderImage = document.querySelector(".slider-image");
   let sliderImages = [];
@@ -331,6 +328,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 2000);
     }
   }
+
+  // trap 감지 변수
+  let trapClicked = false;
 
   // trap-button 클릭 시 봇으로 판단
   const trapButton = document.getElementById("trap-button");
