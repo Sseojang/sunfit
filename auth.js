@@ -1,6 +1,6 @@
 // auth.js
 const BASIC_AUTH_USER = 'demo'
-const BASIC_AUTH_PASS = 'sunfit2024'
+const BASIC_AUTH_PASS = 'sunfit2025'
 
 document.addEventListener('DOMContentLoaded', () => {
   const isAuthenticated = sessionStorage.getItem('auth');
